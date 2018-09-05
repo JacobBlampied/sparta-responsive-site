@@ -46,7 +46,8 @@ h1 {
 /* MAIN CONTENT */
 .main {
   width: 100%;
-  flex-direction: column;
+  display:flex;
+  flex-direction: row;
 }
 
 .main div {
@@ -77,14 +78,23 @@ li a {
     color: white;
 }
 
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 767px) {
   .main {
-    width: 100%;
-    flex-direction: row;
+    flex-direction: column;
   }
+
+  .header {
+    background-image: url(fj.jpeg);
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  
   .main div {
-    width: 200px;
-    margin: 5px;
+    width: 100%;
+    margin: auto;
     border: 1px solid blue;
     box-sizing: border-box;
     padding-top: 40px;
@@ -95,11 +105,5 @@ li a {
     font-size: 20px;
     /* display: block; */
     display:flex;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .header {
-    background-image: image(fj.jpeg);
   }
 }
